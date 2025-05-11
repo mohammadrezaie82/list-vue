@@ -41,8 +41,8 @@ function fetchProjectData() {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      title.value = data.title;
-      description.value = data.description;
+      title.value = data.projects.title;
+      description.value = data.projects.description;
     })
     .catch((err) => console.log(err.message));
 }

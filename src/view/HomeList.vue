@@ -21,8 +21,8 @@ const projects = ref([]);
 onMounted(() => {
   fetch("https://list-vue-three.vercel.app/api/getData")
     .then((res) => res.json())
-    .then((data) => (projects.value = data))
-    .catch((err) => console.log(err.massage));
+    .then((data) => (projects.value = data.projects))
+    .catch((err) => console.log(err.message));
 });
 function handleDelate(id) {
   projects.value = projects.value.filter((project) => project.id !== id);
