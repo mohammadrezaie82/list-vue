@@ -35,7 +35,7 @@ const props = defineProps({ id: Number });
 const title = ref("");
 const description = ref("");
 
-const url = `http://localhost:3000/projects/${props.id}`;
+const url = `https://list-vue-three.vercel.app/api/getData/${props.id}`;
 
 function fetchProjectData() {
   fetch(url)

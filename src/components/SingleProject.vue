@@ -76,7 +76,9 @@ const props = defineProps({
   project: Object,
 });
 const showModal = ref(false);
-const url = ref("http://localhost:3000/projects/" + props.project.id);
+const url = ref(
+  "https://list-vue-three.vercel.app/api/getData/" + props.project.id
+);
 function deleteItem() {
   fetch(url.value, { method: "DELETE" }).then(() =>
     emit("delete", props.project.id)

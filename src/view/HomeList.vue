@@ -19,7 +19,7 @@ import FilterNav from "../components/FilterNav.vue";
 const current = ref("all");
 const projects = ref([]);
 onMounted(() => {
-  fetch("http://localhost:3000/projects")
+  fetch("https://list-vue-three.vercel.app/api/getData")
     .then((res) => res.json())
     .then((data) => (projects.value = data))
     .catch((err) => console.log(err.massage));

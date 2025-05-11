@@ -26,7 +26,7 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 const data = ref([]);
 onMounted(async () => {
-  const res = await fetch("http://localhost:3000/projects");
+  const res = await fetch("https://list-vue-three.vercel.app/api/getData");
   data.value = await res.json();
 });
 </script>
